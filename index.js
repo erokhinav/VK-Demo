@@ -27,8 +27,8 @@ function callMethod() {
     props.push(method[key]);
   });
   console.log(props);
-  VK.callMethod(method.name, method.settings);
-  //VK.callMethod.apply(this, props);
+  // VK.callMethod(method.name, method.settings);
+  VK.callMethod.apply(this, props);
 }
 
 // VK.addCallback('onWindowBlur', function f() {
