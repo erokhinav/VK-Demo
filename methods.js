@@ -99,9 +99,6 @@ var methods = [
   {
     "name": "showAppWidgetPreviewBox",
     "type": "text",
-    "code": "return { 
-      "title": "Цитата", 
-      "text": "Текст цитаты" 
-    };"
+    "code": "return {\n\"title\": \"Цитата\",\n\"text\": \"Текст цитаты\"\n};"
   },
 ];
