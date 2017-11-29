@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
   VK.init(function() {
      // API initialization succeeded
      console.log("!");
@@ -8,7 +8,9 @@
      location.reload();
 }, '5.69');
 
+
 var methodsSelect = document.getElementById("methodsSelect");
+console.log(methods);
 console.log(methods[0]);
 for (var i = 0; i < methods.length; i++) {
   var newEl = document.createElement("option");
