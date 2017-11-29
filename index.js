@@ -2,6 +2,7 @@
   VK.init(function() {
      // API initialization succeeded
      console.log("!");
+     VK.callMethod("showSettingsBox", 8214);
   }, function() {
      // API initialization failed
      location.reload();
