@@ -11,7 +11,7 @@
   <select id="methodsSelect">
   </select>
 </form>
-<button type="button" onclick="callMethod()">Call Method</button>
+<!-- <button type="button" onclick="callMethod()">Call Method</button> -->
 
 
 
@@ -28,8 +28,25 @@
 
 <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 
-<script type="text/javascript" src="methods.js"></script>
-<script type="text/javascript" src="index.js"></script>
+<!-- <script type="text/javascript" src="methods.js"></script>
+<script type="text/javascript" src="index.js"></script> -->
+
+<script type="text/javascript">
+VK.init(function() {
+ // API initialization succeeded
+ console.log("!");
+}, function() {
+ // API initialization failed
+ location.reload();
+}, '5.69');
+
+function myFunction() {
+  console.log(document.getElementById("methodsSelect").selectedIndex);
+  // document.getElementById("op1").innerHTML = "Option111";
+  // document.getElementById("demo").innerHTML = "Paragraph changed.";
+  VK.callMethod("showSettingsBox", 8214);
+}
+</script>
 
 </body>
 </html>
