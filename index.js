@@ -71,7 +71,7 @@ function listenEvent(eventName) {
             args = "";
             var len = eventsMap[eventName].length;
             for (var i = 0; i < len; i++) {
-                args += eventName[eventName][i] + ": " + arguments[i];
+                args += eventsMap[eventName][i] + ": " + arguments[i];
                 if (i + 1 < len) {
                     args += "\n";
                 }
