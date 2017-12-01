@@ -69,7 +69,8 @@ function listenEvent(eventName) {
             console.log(arguments);
             console.log(eventName + "!!!");
             console.log(arguments.length);
-            alert(arguments.join('\n'));
+            // alert(arguments.join('\n'));
+            alert("ok");
         });
         console.log("callback is added.");
     } else {
