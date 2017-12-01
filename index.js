@@ -60,12 +60,15 @@ function createOnClickEvent(name) {
 
 function listenEvent(eventName) {
     console.log(eventName);
+    console.log(document.getElementById(eventName).checked);
     if (document.getElementById(eventName).checked) {
         VK.addCallback(eventName, function f() {
             alert(args);
         });
+        console.log("callback is added.");
     } else {
         VK.removeCallback(eventName);
+        console.log("callback is removed.");
     }
 }
 
