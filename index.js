@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -31,8 +31,10 @@ function callMethod() {
 }
 
 var eventsList = document.getElementById('eventList');
+var eventsMap = {}
 for (var i = 0; i < events.length; i++) {
     var eventName = events[i].name;
+    eventsMap[eventName] = events[i].argsName;
     var checkbox = document.createElement('input');
     checkbox.type = "checkbox";
     // checkbox.name = "name";
@@ -51,6 +53,7 @@ for (var i = 0; i < events.length; i++) {
     eventsList.appendChild(li);
     // eventsList.appendChild(label);
 }
+console.log(eventsMap["onScrollTop"]);
 
 function createOnClickEvent(name) {
     return function() {
@@ -64,6 +67,7 @@ function listenEvent(eventName) {
     if (document.getElementById(eventName).checked) {
         VK.addCallback(eventName, function f() {
             console.log(arguments);
+            console.log(eventName + "!!!");
             console.log(arguments.length);
             alert(arguments.join('\n'));
         });
