@@ -68,7 +68,7 @@ function listenEvent(eventName) {
         VK.addCallback(eventName, function f() {
             console.log(arguments);
             console.log(eventName + "!!!");
-            args = "";
+            args = "Event " + eventName + " is fired with the following args: \n";
             var len = eventsMap[eventName].length;
             for (var i = 0; i < len; i++) {
                 args += eventsMap[eventName][i] + ": " + arguments[i];
