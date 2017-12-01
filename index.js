@@ -86,6 +86,6 @@ function myFunction() {
   // document.getElementById("op1").innerHTML = "Option111";
   // document.getElementById("demo").innerHTML = "Paragraph changed.";
   //VK.callMethod("showSettingsBox", 8214);
-  VK.callMethod("showSettingsBox", 0);
   VK.callMethod("showInstallPushBox");
+  VK.callMethod("showSettingsBox", 0);
 }
