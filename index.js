@@ -66,9 +66,9 @@ function listenEvent(eventName) {
     console.log(document.getElementById(eventName).checked);
     if (document.getElementById(eventName).checked) {
         VK.addCallback(eventName, function f() {
-            console.log(arguments);
-            console.log(eventName + "!!!");
-            console.log(arguments.length);
+            // console.log(arguments);
+            // console.log(eventName + "!!!");
+            // console.log(arguments.length);
             // alert(arguments.join('\n'));
             alert("ok");
         });
