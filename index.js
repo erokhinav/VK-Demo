@@ -68,17 +68,19 @@ function listenEvent(eventName) {
         VK.addCallback(eventName, function f() {
             console.log(arguments);
             console.log(eventName + "!!!");
-            args = "Event " + eventName + " is fired with the following args: \n";
             var len = eventsMap[eventName].length;
-            for (var i = 0; i < len; i++) {
-                args += eventsMap[eventName][i] + ": " + arguments[i];
-                if (i + 1 < len) {
-                    args += "\n";
+            if (len == 0) {
+                alert("Event " + eventName + " is fired.");
+            } else {
+                args = "Event " + eventName + " is fired with the following args: \n";
+                for (var i = 0; i < len; i++) {
+                    args += eventsMap[eventName][i] + ": " + arguments[i];
+                    if (i + 1 < len) {
+                        args += "\n";
+                    }
                 }
+                alert(args);
             }
-            // console.log(arguments.length);
-            alert(args);
-            // alert("ok");
         });
         console.log("callback is added.");
     } else {
