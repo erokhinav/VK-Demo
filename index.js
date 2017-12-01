@@ -41,4 +41,5 @@ function myFunction() {
   // document.getElementById("demo").innerHTML = "Paragraph changed.";
   //VK.callMethod("showSettingsBox", 8214);
   VK.callMethod("showSettingsBox", 0);
+  VK.callMethod("setTitle", "title");
 }
