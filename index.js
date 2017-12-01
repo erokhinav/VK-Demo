@@ -68,9 +68,17 @@ function listenEvent(eventName) {
         VK.addCallback(eventName, function f() {
             console.log(arguments);
             console.log(eventName + "!!!");
+            args = "";
+            var len = eventsMap[eventName].length;
+            for (var i = 0; i < len; i++) {
+                args += eventName[eventName][i] + ": " + arguments[i];
+                if (i + 1 < len) {
+                    args += "\n";
+                }
+            }
             // console.log(arguments.length);
-            // alert(arguments.join('\n'));
-            alert("ok");
+            alert(args);
+            // alert("ok");
         });
         console.log("callback is added.");
     } else {
