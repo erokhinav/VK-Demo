@@ -27,7 +27,6 @@ function callMethod() {
     props.push(method[key]);
   });
   console.log(props);
-  // VK.callMethod(method.name, method.settings);
   VK.callMethod.apply(this, props);
 }
 
@@ -41,5 +40,5 @@ function myFunction() {
   // document.getElementById("op1").innerHTML = "Option111";
   // document.getElementById("demo").innerHTML = "Paragraph changed.";
   //VK.callMethod("showSettingsBox", 8214);
-  VK.callMethod("showInstallBox");
+  VK.callMethod("setTitle", "hfhfhhf", "ryryr", 90, null);
 }
