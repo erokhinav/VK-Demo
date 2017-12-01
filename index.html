@@ -2,33 +2,36 @@
 <html>
 
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="index.css"></link>
 </head>
 
 <body>
 
-<form>
-  <select id="methodsSelect">
-  </select>
-</form>
-<button type="button" onclick="callMethod()">Call Method</button>
+	<form>
+	  <select id="methodsSelect">
+	  </select>
+	</form>
+	<button type="button" onclick="callMethod()" class="callMethodButton">Call Method</button>
+
+	<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
 
 
+	<h1>Hello World</h1>
+	<p>I'm hosted with GitHub Pages.</p>
 
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<p id="demo"></p>
+	<button type="button" onclick="myFunction()"></button>
 
-<p id="demo"></p>
-<button type="button" onclick="myFunction()"></button>
+	<form>
+	  Type code:<br>
+	  <textarea name="Text1" cols="60" rows="5"></textarea>
+	</form>
 
-<form>
-  Type code:<br>
-  <textarea name="Text1" cols="60" rows="5"></textarea>
-</form>
-
-<script type="text/javascript" src="methods.js"></script>
-<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="events.js"></script>
+	<script type="text/javascript" src="methods.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 
 </body>
 </html>

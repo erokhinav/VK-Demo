@@ -1,0 +1,11 @@
+.eventList {
+	overflow: auto;
+	height: 100px;
+	width: 200px;
+	border: 1px solid;
+	padding-left: 0;
+}
+
+.callMethodButton {
+	background-color: #759aaa;
+}
