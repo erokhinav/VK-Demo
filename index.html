@@ -5,6 +5,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="index.css"></link>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
@@ -18,16 +19,13 @@
 	<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
 
 
-	<h1>Hello World</h1>
-	<p>I'm hosted with GitHub Pages.</p>
 
 	<p id="demo"></p>
 	<button type="button" onclick="myFunction()"></button>
 
-	<form>
-	  Type code:<br>
-	  <textarea name="Text1" cols="60" rows="5"></textarea>
-	</form>
+
+	<textarea id="scriptField" cols="60" rows="10"></textarea>
+	<button type="button" onclick="runCode()"></button>
 
 	<script type="text/javascript" src="events.js"></script>
 	<script type="text/javascript" src="methods.js"></script>

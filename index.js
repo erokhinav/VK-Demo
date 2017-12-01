@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -7,7 +7,6 @@ VK.init(function() {
      // API initialization failed
     location.reload();
 }, '5.69');
-
 
 var methodsSelect = document.getElementById("methodsSelect");
 console.log(methodsSelect);
@@ -28,6 +27,24 @@ function callMethod() {
     });
     console.log(props);
     VK.callMethod.apply(this, props);
+
+    var output = "VK.callMethod(";
+    for (var i = 0; i < props.length; i++) {
+        var token = props[i];
+        if (typeof token === 'string' || token instanceof String) {
+            output += "\"" + token + "\"";
+        } else {
+            output += token;
+        }
+        if (i + 1 < props.length) {
+            output += ", ";
+        }
+    }
+    output += ");\n"
+    var scriptField = document.getElementById("scriptField");
+    scriptField.value += output;
+    document.getElementById("scriptField").scrollTop = 
+        document.getElementById("scriptField").scrollHeight;
 }
 
 var eventsList = document.getElementById('eventList');
@@ -70,9 +87,9 @@ function listenEvent(eventName) {
             console.log(eventName + "!!!");
             var len = eventsMap[eventName].length;
             if (len == 0) {
-                alert("Event " + eventName + " is fired.");
+                alert("Event \"" + eventName + "\" is fired.");
             } else {
-                args = "Event " + eventName + " is fired with the following args: \n";
+                args = "Event \"" + eventName + "\" is fired with the following args: \n\n";
                 for (var i = 0; i < len; i++) {
                     args += eventsMap[eventName][i] + ": " + arguments[i];
                     if (i + 1 < len) {
@@ -89,6 +106,19 @@ function listenEvent(eventName) {
     }
 }
 
+function runCode() {
+    var oldScript = document.getElementById('scriptContainer');
+    if (oldScript) {
+      oldScript.parentNode.removeChild(oldScript);
+    }
+
+    var scriptField = document.getElementById("scriptField");
+    var newScript = document.createElement('script');
+    newScript.id = 'scriptContainer';
+    newScript.text = scriptField.value;
+
+    document.body.appendChild(newScript);
+}
 
 
 // var eventsList = document.getElementById('eventList');
@@ -106,6 +136,7 @@ function myFunction() {
   // document.getElementById("op1").innerHTML = "Option111";
   // document.getElementById("demo").innerHTML = "Paragraph changed.";
   //VK.callMethod("showSettingsBox", 8214);
+  console.log(document.getElementById("codeField").value);
   VK.callMethod("showInstallPushBox");
   VK.callMethod("showSettingsBox", 0);
 }
