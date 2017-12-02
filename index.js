@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -106,7 +106,7 @@ function listenEvent(eventName) {
     }
 }
 
-function runCode() {
+function runScript() {
     var oldScript = document.getElementById('scriptContainer');
     if (oldScript) {
       oldScript.parentNode.removeChild(oldScript);

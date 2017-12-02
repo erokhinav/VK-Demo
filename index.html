@@ -9,16 +9,19 @@
 </head>
 
 <body>
+	<div class="container">
+		<div class="scriptArea column" style="background-color:#aaa;">
+			<textarea id="scriptField" class="scriptField" wrap="off" cols="40" rows="10"></textarea>
+			<button type="button" class="runScriptButton" onclick="runScript()">Run</button>
+		</div>
 
-	<textarea id="scriptField" cols="60" rows="10"></textarea>
-	<button type="button" onclick="runCode()">Run</button>
+		<div class="methodsEvents column" style="background-color:#bbb;">
+			<select id="methodsSelect" class="methodSelect"></select>
+			<button type="button" class="callMethodButton" onclick="callMethod()" class="callMethodButton">Call Method</button>
 
-	<select id="methodsSelect"></select>
-	<button type="button" onclick="callMethod()" class="callMethodButton">Call Method</button>
-
-	<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
-
-
+			<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
+		</div>
+	</div>
 
 <!-- 	<p id="demo"></p>
 	<button type="button" onclick="myFunction()"></button> -->
