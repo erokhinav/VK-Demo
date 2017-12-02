@@ -10,22 +10,19 @@
 
 <body>
 
-	<form>
-	  <select id="methodsSelect">
-	  </select>
-	</form>
+	<textarea id="scriptField" cols="60" rows="10"></textarea>
+	<button type="button" onclick="runCode()">Run</button>
+
+	<select id="methodsSelect"></select>
 	<button type="button" onclick="callMethod()" class="callMethodButton">Call Method</button>
 
 	<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
 
 
 
-	<p id="demo"></p>
-	<button type="button" onclick="myFunction()"></button>
+<!-- 	<p id="demo"></p>
+	<button type="button" onclick="myFunction()"></button> -->
 
-
-	<textarea id="scriptField" cols="60" rows="10"></textarea>
-	<button type="button" onclick="runCode()"></button>
 
 	<script type="text/javascript" src="events.js"></script>
 	<script type="text/javascript" src="methods.js"></script>
