@@ -15,7 +15,8 @@
 .column {
 	float: left;
     padding: 10px;
-    height: 300px;
+    height: 500px;
+    width: 303px;
 }
 
 .eventList {
@@ -35,10 +36,12 @@
 
 .scriptArea {
 	display: inline-block;
+	background-color: #aaa;
 }
 
 .methodsEvents {
 	display: inline-block;
+	background-color: #bbb;
 }
 
 .scriptField {

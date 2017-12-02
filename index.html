@@ -10,16 +10,16 @@
 
 <body>
 	<div class="container">
-		<div class="scriptArea column" style="background-color:#aaa;">
-			<textarea id="scriptField" class="scriptField" wrap="off" cols="40" rows="10"></textarea>
+		<div class="scriptArea column">
+			<textarea id="scriptField" class="scriptField" wrap="off" cols="43" rows="10" align="center"></textarea>
 			<button type="button" class="runScriptButton" onclick="runScript()">Run</button>
 		</div>
 
-		<div class="methodsEvents column" style="background-color:#bbb;">
+		<div class="methodsEvents column">
 			<select id="methodsSelect" class="methodSelect"></select>
 			<button type="button" class="callMethodButton" onclick="callMethod()" class="callMethodButton">Call Method</button>
 
-			<ul style="list-style-type:none" id="eventList" class="eventList"></ul>
+			<ul id="eventList" class="eventList"></ul>
 		</div>
 	</div>
 
