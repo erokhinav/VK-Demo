@@ -15,8 +15,14 @@
 .column {
 	float: left;
     padding: 10px;
-    height: 500px;
+    height: 460px;
     width: 303px;
+}
+
+.wideColumn {
+	float: left;
+    height: 40px;
+    width: 607px;
 }
 
 .eventList {
