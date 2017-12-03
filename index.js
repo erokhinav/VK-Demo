@@ -5,11 +5,9 @@ VK.init(function() {
     location.reload();
 }, '5.69');
 
-VK.addCallback("onWindowResized", function(width, height) {
-    alert("Event \"onWindowResized\" is fired with the following args:\n\nwidth: " + width + "\nheight: " + height);
+VK.addCallback("onWindowResized", function() {
+    alert("!");
 });
-VK.callMethod("resizeWindow", 500, 500);
-
 
 var methodsSelect = document.getElementById("methodsSelect");
 for (var i = 0; i < methods.length; i++) {
