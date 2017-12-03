@@ -50,10 +50,22 @@
 	background-color: #fbfcfe;
 	resize: none;
 	border: 2px solid #c9c9c9;
-	margin-top: 3px;
+	margin-top: 8px;
 	font-size: 13px;
-	width: 320px;
+	width: 317px;
 	height: 380px;
+}
+
+.runScriptDescription {
+	font-size: 14px;
+	color: #5c5c5c;
+	font-family: verdana;
+    vertical-align: middle;
+    line-height: 30px;
+    top: 5px;
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
 }
 
 .runScriptButton {
@@ -64,17 +76,22 @@
 	color: white;
 	border: none;
 	font-family: verdana;
+	vertical-align: middle;
+    line-height: 30px;
 	font-size: small;
 	float: right;
 	margin-top: 3px;
 	margin-bottom: 4px;
+	margin-right: 3px;
 }
 
 .methodSelect {
 	display: block;
-	margin-top: 3px;
+	margin-top: 5px;
 	height: 25px;
+	width: 245px;
 	font-size: 11.4px;
+	font-family: verdana;
 	margin-left: 3px;
 	border: 2px solid #c9c9c9;
 	background-color: #fbfcfe;
@@ -82,8 +99,10 @@
 
 .methodSelectDescription {
 	margin-left: 5px;
-	font-size: 14px;
-	color: #c9c9c9;
+	margin-top: 3px;
+	font-size: 13px;
+	color: #5c5c5c;
+	font-family: verdana;
 }
 
 .callMethodButton {
@@ -91,7 +110,7 @@
 	display: block;
 	width: 120px;
 	height: 30px;
-	margin-top: 10px;
+	margin-top: 8px;
 	color: white;
 	border: none;
 	font-family: verdana;
@@ -101,7 +120,7 @@
 
 .eventList {
 	overflow: auto;
-	height: 336px;
+	height: 301px;
 	width: 245px;
 	border: 1px solid;
 	padding-left: 0;
@@ -109,6 +128,22 @@
 	background-color: #fbfcfe;
 	border: 2px solid #c9c9c9;
 	margin-left: 3px;
+	margin-top: 5px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.eventListDescription {
+	margin-left: 5px;
+	margin-top: 16px;
+	font-size: 13px;
+	color: #5c5c5c;
+	font-family: verdana;
+}
+
+.event {
+	width: 330px;
+	height: 27px;
 }
 
 .checkbox {
@@ -117,8 +152,10 @@
 }
 
 .checkboxLabel {
-	font-size: 17px;
+	font-size: 13.5px;
+	font-family: verdana;
 	position: relative;
     vertical-align: middle;
-    bottom: 6px;
+    bottom: 7px;
+    display: inline-block;
 }

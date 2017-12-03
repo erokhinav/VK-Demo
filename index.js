@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -15,6 +15,13 @@ for (var i = 0; i < methods.length; i++) {
     var newEl = document.createElement("option");
     newEl.text = methods[i].name;
     methodsSelect.options.add(newEl, i + 1);
+}
+
+function updateScriptField(output) {
+    var scriptField = document.getElementById("scriptField");
+    scriptField.value += output;
+    document.getElementById("scriptField").scrollTop = 
+        document.getElementById("scriptField").scrollHeight;
 }
 
 function callMethod() {
@@ -41,10 +48,7 @@ function callMethod() {
         }
     }
     output += ");\n"
-    var scriptField = document.getElementById("scriptField");
-    scriptField.value += output;
-    document.getElementById("scriptField").scrollTop = 
-        document.getElementById("scriptField").scrollHeight;
+    updateScriptField(output);
 }
 
 var eventsList = document.getElementById('eventList');
@@ -65,11 +69,16 @@ for (var i = 0; i < events.length; i++) {
     label.htmlFor = eventName;
     label.appendChild(document.createTextNode(eventName));
 
-    var li = document.createElement("li");
-    li.appendChild(checkbox);
-    li.appendChild(label);
+    // var li = document.createElement("li");
+    // li.appendChild(checkbox);
+    // li.appendChild(label);
+    var div = document.createElement("div");
+    div.class = "item";
+    div.className += "event";
+    div.appendChild(checkbox);
+    div.appendChild(label);
 
-    eventsList.appendChild(li);
+    eventsList.appendChild(div);
     // eventsList.appendChild(label);
 }
 console.log(eventsMap["onScrollTop"]);
@@ -85,8 +94,6 @@ function listenEvent(eventName) {
     console.log(document.getElementById(eventName).checked);
     if (document.getElementById(eventName).checked) {
         VK.addCallback(eventName, function f() {
-            console.log(arguments);
-            console.log(eventName + "!!!");
             var len = eventsMap[eventName].length;
             if (len == 0) {
                 alert("Event \"" + eventName + "\" is fired.");
@@ -101,10 +108,37 @@ function listenEvent(eventName) {
                 alert(args);
             }
         });
-        console.log("callback is added.");
+
+        var output = "VK.addCallback(\"" + eventName + "\", function(";
+        var len = eventsMap[eventName].length;
+        if (len == 0) {
+            output += ") {\n    alert(\"Event \"" + eventName + "\" is fired.\");\n});\n";
+        } 
+        else {
+            var args = "";
+            for (var i = 0; i < len; i++) {
+                args += eventsMap[eventName][i];
+                if (i + 1 < len) {
+                    args += ", ";
+                }
+            }
+            output += args;
+            output += ") {\n    alert(\"Event \"" + eventName + "\" is fired with the following args:\\n";
+            args = "";
+            for (var i = 0; i < len; i++) {
+                args += eventsMap[eventName][i] + ": " + arguments[i];
+                if (i + 1 < len) {
+                    args += "\\n";
+                }
+            }
+            output += args;
+            output += ");\n});\n";
+        }
+        updateScriptField(output);
     } else {
         VK.removeCallback(eventName);
-        console.log("callback is removed.");
+        var output = "VK.removeCallback(\"" + eventName + "\");\n";
+        updateScriptField(output);
     }
 }
 
@@ -120,25 +154,4 @@ function runScript() {
     newScript.text = scriptField.value;
 
     document.body.appendChild(newScript);
-}
-
-
-// var eventsList = document.getElementById('eventList');
-// console.log(eventsList);
-// eventsList.appendChild(checkbox);
-// eventsList.appendChild(label);
-
-// VK.addCallback('onWindowBlur', function f() {
-//             alert("!!!");
-//         });
-// VK.removeCallback('onWindowBlur');
-
-function myFunction() {
-  console.log(document.getElementById("methodsSelect").selectedIndex);
-  // document.getElementById("op1").innerHTML = "Option111";
-  // document.getElementById("demo").innerHTML = "Paragraph changed.";
-  //VK.callMethod("showSettingsBox", 8214);
-  console.log(document.getElementById("codeField").value);
-  VK.callMethod("showInstallPushBox");
-  VK.callMethod("showSettingsBox", 0);
 }
