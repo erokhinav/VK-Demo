@@ -153,5 +153,5 @@ function runScript() {
     newScript.id = 'scriptContainer';
     newScript.text = scriptField.value;
     console.log(newScript.text);
-    // document.body.appendChild(newScript);
+    document.body.appendChild(newScript);
 }
