@@ -12,7 +12,6 @@ VK.addCallback("onApplicationAdded", function() {
     alert("Event \"onApplicationAdded\" is fired.");
 });
 VK.callMethod("showInstallBox");
-VK.removeCallback("onApplicationAdded");
 
 var methodsSelect = document.getElementById("methodsSelect");
 console.log(methodsSelect);
