@@ -1,4 +1,3 @@
-window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
 }, function() {
