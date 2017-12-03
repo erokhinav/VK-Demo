@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -7,11 +7,6 @@ VK.init(function() {
      // API initialization failed
     location.reload();
 }, '5.69');
-
-VK.addCallback("onApplicationAdded", function() {
-    alert("Event \"onApplicationAdded\" is fired.");
-});
-VK.callMethod("showInstallBox");
 
 var methodsSelect = document.getElementById("methodsSelect");
 console.log(methodsSelect);
@@ -131,9 +126,9 @@ function listenEvent(eventName) {
             output += ") {\n    alert(\"Event \\\"" + eventName + "\\\" is fired with the following args:\\n";
             args = "";
             for (var i = 0; i < len; i++) {
-                args += eventsMap[eventName][i] + ": " + arguments[i];
+                args += eventsMap[eventName][i] + ": \" + " + eventsMap[eventName][i];
                 if (i + 1 < len) {
-                    args += "\\n";
+                    args += " + \"\\n";
                 }
             }
             output += args;
