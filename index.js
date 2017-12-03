@@ -8,6 +8,12 @@ VK.init(function() {
     location.reload();
 }, '5.69');
 
+VK.addCallback("onApplicationAdded", function() {
+    alert("Event \"onApplicationAdded\" is fired.");
+});
+VK.callMethod("showInstallBox");
+VK.removeCallback("onApplicationAdded");
+
 var methodsSelect = document.getElementById("methodsSelect");
 console.log(methodsSelect);
 console.log(methods[0]);
