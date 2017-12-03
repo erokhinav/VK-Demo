@@ -26,9 +26,17 @@
 		<div class="scriptArea column">
 			<div class="runScriptDescription">Введите код и запустите его:</div>
 			<button type="button" class="runScriptButton" onclick="runScript()">Запустить</button>
-			<textarea id="scriptField" class="scriptField" wrap="off"></textarea>
+			<div id="scriptField" class="scriptField"></div>
+
 		</div>
 	</div>
+
+	<script src="syntax/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var editor = ace.edit("scriptField");
+		//editor.setTheme("ace/theme/monokai");
+		editor.getSession().setMode("ace/mode/javascript");
+	</script>
 
 	<script type="text/javascript" src="events.js"></script>
 	<script type="text/javascript" src="methods.js"></script>

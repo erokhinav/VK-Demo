@@ -1,3 +1,4 @@
+window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
 }, function() {
@@ -14,7 +15,10 @@ for (var i = 0; i < methods.length; i++) {
 
 function updateScriptField(output) {
     var scriptField = document.getElementById("scriptField");
-    scriptField.value += output;
+    console.log("NOW " + output);
+    //scriptField.innerHTML += output;
+    //console.log(scriptField.innerHTML);
+    editor.setValue(editor.getValue() + output);
     document.getElementById("scriptField").scrollTop = 
         document.getElementById("scriptField").scrollHeight;
 }
@@ -136,6 +140,6 @@ function runScript() {
     var scriptField = document.getElementById("scriptField");
     var newScript = document.createElement('script');
     newScript.id = 'scriptContainer';
-    newScript.text = scriptField.value;
+    newScript.text = editor.getValue();
     document.body.appendChild(newScript);
 }
