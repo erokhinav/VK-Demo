@@ -21,7 +21,7 @@
 .header {
 	float: left;
     height: 40px;
-    width: 607px;
+    width: 605px;
     background-color: #416ea4;
 }
 
@@ -42,7 +42,7 @@
 .methodsEvents {
 	display: inline-block;
 	background-color: #f2f7fc;
-	width: 267px;
+	width: 265px;
 	/*background-color: #bbb;*/
 }
 
@@ -59,7 +59,7 @@
 .runScriptButton {
 	background-color: #416ea4;
 	display: block;
-	width: 60px;
+	width: 80px;
 	height: 30px;
 	color: white;
 	border: none;
@@ -68,7 +68,6 @@
 	float: right;
 	margin-top: 3px;
 	margin-bottom: 4px;
-	margin-right: 4px;
 }
 
 .methodSelect {
@@ -77,12 +76,20 @@
 	height: 25px;
 	font-size: 11.4px;
 	margin-left: 3px;
+	border: 2px solid #c9c9c9;
+	background-color: #fbfcfe;
+}
+
+.methodSelectDescription {
+	margin-left: 5px;
+	font-size: 14px;
+	color: #c9c9c9;
 }
 
 .callMethodButton {
 	background-color: #416ea4;
 	display: block;
-	width: 100px;
+	width: 120px;
 	height: 30px;
 	margin-top: 10px;
 	color: white;

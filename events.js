@@ -11,82 +11,107 @@ var events = [
   },
   // 3
   {
-    "name": "onRequestSuccess",
+    "name": "onSettingsCancel",
     "argsName": []
   },
   // 4
   {
-    "name": "onRequestCancel",
-    "argsName": []
+    "name": "onGroupSettingsChanged",
+    "argsName": ["accessMask", "accessKey"]
   },
   // 5
   {
-    "name": "onRequestFail",
-    "argsName": ["error"]
+    "name": "onGroupSettingsCancel",
+    "argsName": []
   },
   // 6
   {
-    "name": "onBalanceChanged",
-    "argsName": ["balance"]
+    "name": "onRequestSuccess",
+    "argsName": []
   },
   // 7
   {
-    "name": "onOrderCancel",
+    "name": "onRequestCancel",
     "argsName": []
   },
   // 8
   {
-    "name": "onOrderSuccess",
-    "argsName": ["orderId"]
+    "name": "onRequestFail",
+    "argsName": ["error"]
   },
   // 9
-  {
-    "name": "onOrderFail",
-    "argsName": ["errorCode"]
-  },
-  // 10
   {
     "name": "onProfilePhotoSave",
     "argsName": []
   },
-  // 11
+  // 10
   {
     "name": "onWindowResized",
     "argsName": ["width", "height"]
   },
-  // 12
+  // 11
   {
     "name": "onLocationChanged",
     "argsName": ["location"]
   },
-  // 13
-  {
-    "name": "onWindowBlur",
-    "argsName": []
-  },
-  // 14
-  {
-    "name": "onWindowFocus",
-    "argsName": []
-  },
-  // 15
+  // 12
   {
     "name": "onScrollTop",
     "argsName": ["scrollTop", "windowHeight", "offset", "isActive"]
   },
-  // 16
+  // 13
   {
     "name": "onScroll",
     "argsName": ["scrollTop", "windowHeight"]
   },
+  // 14
+  {
+    "name": "onInstallPushSuccess",
+    "argsName": []
+  },
+  // 15
+  {
+    "name": "onAllowMessagesFromCommunity",
+    "argsName": []
+  },
+  // 16
+  {
+    "name": "onAllowMessagesFromCommunityCancel",
+    "argsName": []
+  },
   // 17
   {
-    "name": "onToggleFlash",
-    "argsName": ["show"]
+    "name": "onCheckUnitySupportSuccess",
+    "argsName": []
   },
   // 18
   {
-    "name": "onInstallPushSuccess",
+    "name": "onCheckUnitySupportFail",
+    "argsName": []
+  },
+  // 19
+  {
+    "name": "onCheckFlashSupportSuccess",
+    "argsName": []
+  },
+  // 20
+  {
+    "name": "onCheckFlashSupportFail",
+    "argsName": []
+  },
+  // 21
+  {
+    "name": "onAppWidgetPreviewFail",
+    "argsName": []
+  },
+  // 22
+  {
+    "name": "onAppWidgetPreviewCancel",
+    "argsName": []
+  },
+  // 23
+  {
+    "name": "onAppWidgetPreviewSuccess",
     "argsName": []
   },
 ];
