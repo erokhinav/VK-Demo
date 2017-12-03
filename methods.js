@@ -56,6 +56,7 @@ var methods = [
   {
     "name": "setLocation",
     "location": "new_location",
+    "fireEvent": true,
   },
   // 12
   {
