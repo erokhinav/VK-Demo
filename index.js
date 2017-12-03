@@ -26,7 +26,8 @@ function callMethod() {
     Object.keys(method).forEach(function eachKey(key) {
         props.push(method[key]);
     });
-    VK.callMethod.apply(this, props);
+    console.log("VIVOZHY PROPS" + props);
+    VK.callMethod.apply(null, props);
 
     var output = "VK.callMethod(";
     for (var i = 0; i < props.length; i++) {

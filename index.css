@@ -1,6 +1,5 @@
 .container {
-	width: 605px;
-	overflow: auto;
+	width: 1000px;
 }
 
 .container:after {
