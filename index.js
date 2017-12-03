@@ -5,10 +5,6 @@ VK.init(function() {
     location.reload();
 }, '5.69');
 
-VK.addCallback("onWindowResized", function() {
-    alert("!");
-});
-
 var methodsSelect = document.getElementById("methodsSelect");
 for (var i = 0; i < methods.length; i++) {
     var newEl = document.createElement("option");
@@ -30,7 +26,6 @@ function callMethod() {
     Object.keys(method).forEach(function eachKey(key) {
         props.push(method[key]);
     });
-    console.log("VIVOZHY PROPS" + props);
     VK.callMethod.apply(null, props);
 
     var output = "VK.callMethod(";
