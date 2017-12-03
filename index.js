@@ -1,16 +1,11 @@
-  // window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
-    console.log("!");
-     // VK.callMethod("showSettingsBox", 8214);
 }, function() {
      // API initialization failed
     location.reload();
 }, '5.69');
 
 var methodsSelect = document.getElementById("methodsSelect");
-console.log(methodsSelect);
-console.log(methods[0]);
 for (var i = 0; i < methods.length; i++) {
     var newEl = document.createElement("option");
     newEl.text = methods[i].name;
@@ -26,13 +21,11 @@ function updateScriptField(output) {
 
 function callMethod() {
     var selInd = methodsSelect.selectedIndex;
-    console.log(selInd);
     var method = methods[selInd];
     var props = [];
     Object.keys(method).forEach(function eachKey(key) {
         props.push(method[key]);
     });
-    console.log(props);
     VK.callMethod.apply(this, props);
 
     var output = "VK.callMethod(";
@@ -58,7 +51,6 @@ for (var i = 0; i < events.length; i++) {
     eventsMap[eventName] = events[i].argsName;
     var checkbox = document.createElement('input');
     checkbox.type = "checkbox";
-    // checkbox.name = "name";
     checkbox.id = eventName;
     checkbox.className += "checkbox";
     var name = (" " + eventName).slice(1);
@@ -69,9 +61,6 @@ for (var i = 0; i < events.length; i++) {
     label.htmlFor = eventName;
     label.appendChild(document.createTextNode(eventName));
 
-    // var li = document.createElement("li");
-    // li.appendChild(checkbox);
-    // li.appendChild(label);
     var div = document.createElement("div");
     div.class = "item";
     div.className += "event";
@@ -79,9 +68,7 @@ for (var i = 0; i < events.length; i++) {
     div.appendChild(label);
 
     eventsList.appendChild(div);
-    // eventsList.appendChild(label);
 }
-console.log(eventsMap["onScrollTop"]);
 
 function createOnClickEvent(name) {
     return function() {
@@ -90,8 +77,6 @@ function createOnClickEvent(name) {
 }
 
 function listenEvent(eventName) {
-    console.log(eventName);
-    console.log(document.getElementById(eventName).checked);
     if (document.getElementById(eventName).checked) {
         VK.addCallback(eventName, function f() {
             var len = eventsMap[eventName].length;
@@ -123,7 +108,7 @@ function listenEvent(eventName) {
                 }
             }
             output += args;
-            output += ") {\n    alert(\"Event \\\"" + eventName + "\\\" is fired with the following args:\\n";
+            output += ") {\n    alert(\"Event \\\"" + eventName + "\\\" is fired with the following args:\\n\\n";
             args = "";
             for (var i = 0; i < len; i++) {
                 args += eventsMap[eventName][i] + ": \" + " + eventsMap[eventName][i];
@@ -152,6 +137,5 @@ function runScript() {
     var newScript = document.createElement('script');
     newScript.id = 'scriptContainer';
     newScript.text = scriptField.value;
-    console.log(newScript.text);
     document.body.appendChild(newScript);
 }

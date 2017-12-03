@@ -34,7 +34,6 @@
 
 .scriptArea {
 	display: inline-block;
-	/*background-color: #aaa;*/
 	background-color: #f2f7fc;
 	width: 340px;
 }
@@ -43,7 +42,6 @@
 	display: inline-block;
 	background-color: #f2f7fc;
 	width: 265px;
-	/*background-color: #bbb;*/
 }
 
 .scriptField {
