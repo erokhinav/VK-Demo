@@ -152,6 +152,6 @@ function runScript() {
     var newScript = document.createElement('script');
     newScript.id = 'scriptContainer';
     newScript.text = scriptField.value;
-
+    console.log(newScript.text);
     document.body.appendChild(newScript);
 }
