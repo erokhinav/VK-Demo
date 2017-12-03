@@ -16,51 +16,101 @@
 	float: left;
     padding: 10px;
     height: 460px;
-    width: 303px;
 }
 
-.wideColumn {
+.header {
 	float: left;
     height: 40px;
-    width: 607px;
+    width: 626px;
+    background-color: #416ea4;
+}
+
+.headerText {
+	position: relative;
+    vertical-align: middle;
+    bottom: 8px;
+    color: #fbfcfe;
 }
 
 .eventList {
 	overflow: auto;
-	height: 100px;
-	width: 200px;
+	height: 336px;
+	width: 262px;
 	border: 1px solid;
 	padding-left: 0;
 	list-style-type: none;
-	background-color: lightblue;
+	background-color: #fbfcfe;
+	border: 2px solid #c9c9c9;
+	margin-left: 3px;
 }
 
 .runScriptButton {
 	background-color: #416ea4;
 	display: block;
+	width: 60px;
+	height: 30px;
+	color: white;
+	border: none;
+	font-family: verdana;
+	font-size: small;
+	float: right;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	margin-right: 4px;
 }
 
 .scriptArea {
 	display: inline-block;
-	background-color: #aaa;
+	/*background-color: #aaa;*/
+	background-color: #f2f7fc;
+	width: 344px;
 }
 
 .methodsEvents {
 	display: inline-block;
-	background-color: #bbb;
+	background-color: #f2f7fc;
+	/*background-color: #bbb;*/
 }
 
 .scriptField {
-	background-color: lightblue;
+	background-color: #fbfcfe;
 	resize: none;
-	border: 2px solid #888;
+	border: 2px solid #c9c9c9;
+	margin-top: 3px;
+	font-size: 13px;
+	width: 320px;
+	height: 380px;
 }
 
 .callMethodButton {
 	background-color: #416ea4;
 	display: block;
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+	color: white;
+	border: none;
+	font-family: verdana;
+	font-size: small;
+	margin-left: 3px;
 }
 
 .methodSelect {
 	display: block;
+	margin-top: 3px;
+	height: 25px;
+	font-size: 12.3px;
+	margin-left: 3px;
+}
+
+.checkbox {
+	height: 20px;
+	width: 20px;
+}
+
+.checkboxLabel {
+	font-size: 17px;
+	position: relative;
+    vertical-align: middle;
+    bottom: 6px;
 }

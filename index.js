@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -56,11 +56,13 @@ for (var i = 0; i < events.length; i++) {
     checkbox.type = "checkbox";
     // checkbox.name = "name";
     checkbox.id = eventName;
+    checkbox.className += "checkbox";
     var name = (" " + eventName).slice(1);
     checkbox.onclick = createOnClickEvent(name);
 
     var label = document.createElement('label')
-    // label.htmlFor = "id";
+    label.className += "checkboxLabel";
+    label.htmlFor = eventName;
     label.appendChild(document.createTextNode(eventName));
 
     var li = document.createElement("li");
