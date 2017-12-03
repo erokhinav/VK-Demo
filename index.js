@@ -15,8 +15,6 @@ for (var i = 0; i < methods.length; i++) {
 function updateScriptField(output) {
     var scriptField = document.getElementById("scriptField");
     console.log("NOW " + output);
-    //scriptField.innerHTML += output;
-    //console.log(scriptField.innerHTML);
     editor.setValue(editor.getValue() + output);
     document.getElementById("scriptField").scrollTop = 
         document.getElementById("scriptField").scrollHeight;
