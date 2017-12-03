@@ -1,4 +1,4 @@
-  // window.name = 'fXD';
+  window.name = 'fXD';
 VK.init(function() {
      // API initialization succeeded
     console.log("!");
@@ -112,7 +112,7 @@ function listenEvent(eventName) {
         var output = "VK.addCallback(\"" + eventName + "\", function(";
         var len = eventsMap[eventName].length;
         if (len == 0) {
-            output += ") {\n    alert(\"Event \"" + eventName + "\" is fired.\");\n});\n";
+            output += ") {\n    alert(\"Event \\\"" + eventName + "\\\" is fired.\");\n});\n";
         } 
         else {
             var args = "";
@@ -123,7 +123,7 @@ function listenEvent(eventName) {
                 }
             }
             output += args;
-            output += ") {\n    alert(\"Event \"" + eventName + "\" is fired with the following args:\\n";
+            output += ") {\n    alert(\"Event \\\"" + eventName + "\\\" is fired with the following args:\\n";
             args = "";
             for (var i = 0; i < len; i++) {
                 args += eventsMap[eventName][i] + ": " + arguments[i];
