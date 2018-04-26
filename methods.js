@@ -102,4 +102,10 @@ var methods = [
     "type": "text",
     "code": "return {\n   \"title\": \"Цитата\",\n   \"text\": \"Текст цитаты\"\n};"
   },
+  {
+    "name": "showVKPayTestResponseBox",
+    "amount": 500,
+    "description": "bla",
+    "merchant_id": 4098743,
+  }
 ];
